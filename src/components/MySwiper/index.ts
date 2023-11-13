@@ -1,0 +1,1 @@
+export { MySwiper } from "./MySwiper";

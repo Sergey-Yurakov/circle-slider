@@ -1,0 +1,145 @@
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  border-left: 1px solid var(--line-color-opacity);
+  border-right: 1px solid var(--line-color-opacity);
+  height: 100vh;
+}
+
+.title {
+  position: absolute;
+  //top: 15%;
+  top: 170px;
+  max-width: 8em;
+  //padding: 1.5em 0 0 1.5em;
+  padding-left: 78px;
+  margin: 0;
+  color: var(--black-blue);
+
+  &::before {
+    //margin-top: 1.5em;
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 120px;
+    top: 0;
+    left: 0;
+    background: var(--linear-gradient);
+  }
+}
+
+.circleSvg {
+  position: absolute;
+  //top: 30%;
+  top: 450px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //transform-origin: center center;
+  //transform-box: view-box;
+}
+
+.dotHovered {
+  fill: white;
+}
+
+.dotNumber {
+  color: rgba(48, 62, 88, 0.5);
+  font-weight: 400;
+  font-size: 20px;
+  text-anchor: middle;
+  dominant-baseline: central;
+  opacity: 0;
+}
+.dotNumberOp {
+  color: rgba(48, 62, 88, 0.5);
+  font-weight: 400;
+  font-size: 20px;
+  text-anchor: middle;
+  dominant-baseline: central;
+  opacity: 1;
+}
+
+.dotHovered + .dotNumber {
+  opacity: 1;
+}
+
+
+.dot-1, .dot-2, .dot-3, .dot-4, .dot-5, .dot-6 {
+  cursor: pointer;
+}
+
+.counter {
+  padding-bottom: 20px;
+  font-family: "PT Sans", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  border: 1px solid var(--black-blue);
+
+  &:disabled {
+    border: 1px solid rgba(66, 86, 122, 0.5);
+    cursor: not-allowed;
+  }
+
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.nameMarker,
+.nameMarkerActive {
+  font-family: "PT Sans", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--black-blue);
+  //display: none;
+}
+
+.nameMarkerActive {
+  display: block;
+}
+
+//.counterWrapper {
+//  position: absolute;
+//  top: 71%;
+//  left: 5%;
+//}
+
+.titleCircle {
+  font-family: "PT Sans", serif;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 160px;
+}
+
+.leftTitleCircle {
+  fill: var(--iris-100);
+}
+
+.rightTitleCircle {
+  fill: var(--fuschia-100);
+}
+
+.contentWrapper {
+  position: relative;
+  height: 65%;
+}
+
+.contentFooter {
+  position: absolute;
+  top: 700px;
+  padding-left: 78px;
+  width: 91%;
+}
