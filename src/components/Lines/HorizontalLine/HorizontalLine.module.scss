@@ -6,3 +6,17 @@
     background: rgba(66, 86, 122, 0.1);
     top: 450px;
 }
+
+@media (max-width: 1024px) {
+    .line {
+        background: var(--mobile-horizontal-line-color);
+        width: 92%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 870px) {
+    .line {
+        top: 40%;
+    }
+}

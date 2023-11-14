@@ -10,7 +10,7 @@ import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 
 import cn from 'classnames';
-import { FooterSlider } from '../Sliders/FooterSlider';
+import { CardList } from '../Cards/CardList';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -121,7 +121,17 @@ export const HistoricalDates = () => {
 
             <div className={cl.contentWrapper}>
                 <Tittle className={cl.title} title={'Исторические даты'} />
-                <div className={cl.circleSvg}>
+
+                <div className={cl.mobileDateTitle}>
+                    <p id={'title-start-date'} className={cn(cl.leftTitleCircleMobile, cl.titleCircle)}>
+                        {startDate}
+                    </p>
+                    <p id={'title-end-date'} className={cn(cl.rightTitleCircleMobile, cl.titleCircle)}>
+                        {endDate}
+                    </p>
+                </div>
+
+                <div className={cl.circleSvgWrapper}>
                     <svg width="1050" height="660">
                         <g>
                             <text
@@ -219,22 +229,24 @@ export const HistoricalDates = () => {
                 </div>
 
                 <div className={cl.contentFooter}>
-                    <div className={cl.counterWrapper}>
-                        <div className={cl.counter}>{`${selectedDot}/${mockData.length}`}</div>
-                        <div className={cl.btnWrapper}>
-                            <button className={cl.btn} disabled={selectedDot === 1} onClick={handlePrevSlide}>
-                                <LeftArrowIcon />
-                            </button>
-                            <button
-                                className={cl.btn}
-                                disabled={selectedDot === mockData.length}
-                                onClick={handleNextSlide}
-                            >
-                                <RightArrowIcon />
-                            </button>
+                    <div className={cl.contentFooterWrapper}>
+                        <div className={cl.counterWrapper}>
+                            <div className={cl.counter}>{`${selectedDot}/${mockData.length}`}</div>
+                            <div className={cl.btnWrapper}>
+                                <button className={cl.btn} disabled={selectedDot === 1} onClick={handlePrevSlide}>
+                                    <LeftArrowIcon />
+                                </button>
+                                <button
+                                    className={cl.btn}
+                                    disabled={selectedDot === mockData.length}
+                                    onClick={handleNextSlide}
+                                >
+                                    <RightArrowIcon />
+                                </button>
+                            </div>
                         </div>
+                        <CardList data={currentArrayHistory} />
                     </div>
-                    <FooterSlider data={currentArrayHistory} />
                 </div>
             </div>
         </div>

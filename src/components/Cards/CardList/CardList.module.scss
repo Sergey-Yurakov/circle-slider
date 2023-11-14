@@ -38,3 +38,24 @@
    visibility: hidden;
   }
 }
+
+@media (max-width: 1024px) {
+  .cardListWrapper {
+    padding: 0;
+    height: 40vh;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .nextSlide {
+    opacity: 0.4 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardListWrapper {
+    height: auto;
+  }
+}

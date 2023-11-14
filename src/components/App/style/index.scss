@@ -1,6 +1,11 @@
 @import "./global/globalColor.module";
 
+html {
+  font-size: 100%;
+}
+
 body {
+  background-color: var(--background-body);
   margin: 0;
   padding: 0;
   box-sizing: border-box;

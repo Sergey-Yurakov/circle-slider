@@ -1,25 +1,28 @@
 import { SubArrayType } from '../../HistoricalDates/mockData';
 import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
-import cl from './FooterSlider.module.scss';
+import cl from './CardList.module.scss';
 import { ReactComponent as LeftArrowIcon } from '../../../assets/icons/left-arrow.svg';
 import { ReactComponent as RightArrowIcon } from '../../../assets/icons/right-arrow.svg';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import './Swipes.scss';
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { Pagination } from 'swiper/modules';
 
 type CardListProps = {
     data?: SubArrayType[];
 };
 
-export const FooterSlider = (props: CardListProps) => {
+export const CardList = (props: CardListProps) => {
     const { data } = props;
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
 
     const [swiper, setSwiper] = useState<SwiperClass>(null);
+    const swiperRef = useRef(null);
 
     const handlePrev = () => {
         swiper.slidePrev();
@@ -41,14 +44,19 @@ export const FooterSlider = (props: CardListProps) => {
 
     const sliderSettings = {
         440: {
-            slidesPerView: 1,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: 10,
         },
         680: {
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 10,
         },
         1024: {
+            slidesPerView: 2,
+            spaceBetween: 80,
+            slideNextClass: cl.nextSlide,
+        },
+        1280: {
             slidesPerView: 3,
             spaceBetween: 80,
         },
@@ -63,12 +71,14 @@ export const FooterSlider = (props: CardListProps) => {
             </div>
 
             <Swiper
+                ref={swiperRef}
                 onSwiper={setSwiper}
                 onSlideChange={updateNavigation}
                 onReachBeginning={() => setIsBeginning(true)}
                 onReachEnd={() => setIsEnd(true)}
-                slidesPerView={3}
                 breakpoints={sliderSettings}
+                pagination={{ clickable: true }}
+                modules={[Pagination]}
             >
                 {data?.map(item => {
                     return (
