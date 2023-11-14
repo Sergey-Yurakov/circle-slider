@@ -1,0 +1,40 @@
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  color: var(--blue);
+  margin-top: 0;
+}
+
+.body {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--black-blue);
+}
+
+.cardListWrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  margin-top: 56px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  & svg {
+    stroke: var(--black-blue);
+  }
+
+  &:disabled {
+   visibility: hidden;
+  }
+}

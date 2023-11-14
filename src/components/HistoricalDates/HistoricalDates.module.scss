@@ -9,16 +9,13 @@
 
 .title {
   position: absolute;
-  //top: 15%;
   top: 170px;
   max-width: 8em;
-  //padding: 1.5em 0 0 1.5em;
   padding-left: 78px;
   margin: 0;
   color: var(--black-blue);
 
   &::before {
-    //margin-top: 1.5em;
     content: '';
     position: absolute;
     width: 5px;
@@ -31,12 +28,9 @@
 
 .circleSvg {
   position: absolute;
-  //top: 30%;
   top: 450px;
   left: 50%;
   transform: translate(-50%, -50%);
-  //transform-origin: center center;
-  //transform-box: view-box;
 }
 
 .dotHovered {
@@ -44,7 +38,7 @@
 }
 
 .dotNumber {
-  color: rgba(48, 62, 88, 0.5);
+  color: var(--black-blue);
   font-weight: 400;
   font-size: 20px;
   text-anchor: middle;
@@ -52,7 +46,7 @@
   opacity: 0;
 }
 .dotNumberOp {
-  color: rgba(48, 62, 88, 0.5);
+  color: var(--black-blue);
   font-weight: 400;
   font-size: 20px;
   text-anchor: middle;
@@ -71,7 +65,6 @@
 
 .counter {
   padding-bottom: 20px;
-  font-family: "PT Sans", serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -84,12 +77,13 @@
   background: none;
   cursor: pointer;
   border: 1px solid var(--black-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:disabled {
-    border: 1px solid rgba(66, 86, 122, 0.5);
-    cursor: not-allowed;
+    opacity: 0.5;
   }
-
 }
 
 .btnWrapper {
@@ -99,26 +93,17 @@
 
 .nameMarker,
 .nameMarkerActive {
-  font-family: "PT Sans", serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
   color: var(--black-blue);
-  //display: none;
 }
 
 .nameMarkerActive {
   display: block;
 }
 
-//.counterWrapper {
-//  position: absolute;
-//  top: 71%;
-//  left: 5%;
-//}
-
 .titleCircle {
-  font-family: "PT Sans", serif;
   font-weight: 700;
   font-size: 200px;
   line-height: 160px;
@@ -140,6 +125,9 @@
 .contentFooter {
   position: absolute;
   top: 700px;
+  width: 100%;
+}
+
+.counterWrapper {
   padding-left: 78px;
-  width: 91%;
 }
