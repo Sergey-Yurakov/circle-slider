@@ -11,7 +11,8 @@
 
 ### а затем
 
-### `yarn start`
+### `yarn start`/`npm i` для установки зависимостей, а далее
+### `yarn start`/`npm start`
 
 Запускается на [http://localhost:3000](http://localhost:3000) в браузере.
 
