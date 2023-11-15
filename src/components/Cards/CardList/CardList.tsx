@@ -1,16 +1,15 @@
-import { SubArrayType } from '../../HistoricalDates/mockData';
-import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react';
-import cl from './CardList.module.scss';
-import { ReactComponent as LeftArrowIcon } from '../../../assets/icons/left-arrow.svg';
-import { ReactComponent as RightArrowIcon } from '../../../assets/icons/right-arrow.svg';
-
+import { ReactComponent as LeftArrowIcon } from '@/assets/icons/left-arrow.svg';
+import { ReactComponent as RightArrowIcon } from '@/assets/icons/right-arrow.svg';
+import { SubArrayType } from '@/components/HistoricalDates';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './Swipes.scss';
-
-import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+
+import cl from './CardList.module.scss';
+import './Swipes.scss';
 
 type CardListProps = {
     data?: SubArrayType[];

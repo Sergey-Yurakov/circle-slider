@@ -1,15 +1,15 @@
-import cl from './HistoricalDates.module.scss';
-import { Tittle } from '../Tittle';
-import { HorizontalLine } from '../Lines/HorizontalLine';
-import { VerticalLine } from '../Lines/VerticalLine';
-import { mockData, SubArrayType } from './mockData';
-import { useEffect, useState } from 'react';
-import { ReactComponent as LeftArrowIcon } from '../../assets/icons/left-arrow.svg';
-import { ReactComponent as RightArrowIcon } from '../../assets/icons/right-arrow.svg';
+import { ReactComponent as LeftArrowIcon } from '@/assets/icons/left-arrow.svg';
+import { ReactComponent as RightArrowIcon } from '@/assets/icons/right-arrow.svg';
+import { CardList } from '@/components/Cards/CardList';
+import { HorizontalLine } from '@/components/Lines/HorizontalLine';
+import { VerticalLine } from '@/components/Lines/VerticalLine';
+import { TimeLineDates } from '@/components/TimeLineDates';
+import { Tittle } from '@/components/Tittle';
 import { gsap } from 'gsap';
+import { useEffect, useState } from 'react';
 
-import { CardList } from '../Cards/CardList';
-import { TimeLineDates } from '../TimeLineDates';
+import cl from './HistoricalDates.module.scss';
+import { SubArrayType, mockData } from './mockData';
 
 export const HistoricalDates = () => {
     const [startDate, setStartDate] = useState<string>('2015');

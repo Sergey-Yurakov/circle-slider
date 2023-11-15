@@ -1,9 +1,10 @@
-import cl from './TimeLineDates.module.scss';
+import { mockData } from '@/components/HistoricalDates';
 import cn from 'classnames';
-import { mockData } from '../HistoricalDates/mockData';
-import { TextPlugin } from 'gsap/TextPlugin';
 import { gsap } from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
 import { useEffect } from 'react';
+
+import cl from './TimeLineDates.module.scss';
 
 gsap.registerPlugin(TextPlugin);
 
