@@ -1,0 +1,106 @@
+.mobileDateTitle {
+  display: none;
+}
+
+.titleCircle {
+  font-weight: 700;
+  font-size: 12.5rem;
+  line-height: 160px;
+}
+
+.circleSvgWrapper {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leftTitleCircle {
+  fill: var(--iris-100);
+}
+
+.rightTitleCircle {
+  fill: var(--fuschia-100);
+}
+
+.dotHovered {
+  fill: white;
+}
+
+.dotNumber,
+.dotNumberOp {
+  color: var(--black-blue);
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-anchor: middle;
+  dominant-baseline: central;
+  opacity: 0;
+}
+.dotNumberOp {
+  opacity: 1;
+}
+
+.dotHovered + .dotNumber {
+  opacity: 1;
+}
+
+.nameMarker,
+.nameMarkerActive {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 30px;
+  color: var(--black-blue);
+}
+
+.nameMarkerActive {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .mobileDateTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+    gap: 24px;
+  }
+
+  .leftTitleCircleMobile {
+    color: var(--blue);
+  }
+
+  .rightTitleCircleMobile {
+    color: var(--fuschia-80);
+  }
+
+  .circleSvgWrapper {
+    display: none;
+  }
+
+  .titleCircle {
+    font-size: 11rem;
+    line-height: 0;
+  }
+}
+
+// Media
+@media (max-width: 870px) {
+  .mobileDateTitle {
+    gap: 16px;
+  }
+
+  .titleCircle {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileDateTitle {
+    gap: 4px;
+    margin-top: 56px;
+  }
+
+  .titleCircle {
+    font-size: 3.5rem;
+    line-height: 72px;
+  }
+}

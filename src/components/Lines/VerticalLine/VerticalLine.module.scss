@@ -5,8 +5,9 @@
     background: rgba(66, 86, 122, 0.1);
     left: 50%;
     transform: translateX(-50%);
+}
 
-    @media (max-width: 1024px) {
-        display: none;
-    }
+// Media
+@media (max-width: 1024px) {
+    display: none;
 }
