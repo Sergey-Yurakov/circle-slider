@@ -9,7 +9,7 @@
 
 .title {
   position: absolute;
-  top: 170px;
+  top: 80px;
   max-width: 8em;
   padding-left: 78px;
   margin: 0;
@@ -79,6 +79,7 @@
 
   &:disabled {
     opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 
@@ -167,7 +168,8 @@
   }
 
   .titleCircle {
-    font-size: 11.5rem;
+    font-size: 11rem;
+    line-height: 0;
   }
 
   .contentWrapper {
@@ -192,7 +194,6 @@
 @media (max-width: 870px) {
   .mobileDateTitle {
     gap: 16px;
-    margin-top: 15%;
   }
 
   .titleCircle {
